@@ -1,6 +1,6 @@
 {
   "name": "Extension boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Greyscale + timing?",
   "homepage_url": "https://github.com/underHA/defhacks-virtual-2020/",
@@ -23,7 +23,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "<all_urls>"
       ],
       "css": [
         "src/inject/inject.css"
@@ -31,7 +31,7 @@
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "<all_urls>"
       ],
       "js": [
         "src/inject/inject.js"

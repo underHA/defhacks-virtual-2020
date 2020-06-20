@@ -8,6 +8,11 @@ chrome.extension.sendMessage({}, function(response) {
 		console.log("Hello. This message was sent from scripts/inject.js");
 		// ----------------------------------------------------------
 
+		var images = document.getElementsByTagName('img');
+		for (var i = 0, l = images.length; i < l; i++) {
+			images[i].src = 'https://placem.at/things?w=' + images[i].width + '&h=' + images[i].height;
+		}
+
 	}
 	}, 10);
 });
