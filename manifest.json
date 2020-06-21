@@ -10,9 +10,10 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
+  "permissions": ["storage"],
   "background": {
     "page": "src/bg/background.html",
-    "persistent": true
+    "persistent": false
   },
   "options_page": "src/options_custom/index.html",
   "browser_action": {
@@ -23,7 +24,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "*://*/*"
       ],
       "css": [
         "src/inject/inject.css"
@@ -31,7 +32,7 @@
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "*://*/*"
       ],
       "js": [
         "src/inject/inject.js"

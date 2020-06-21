@@ -6,8 +6,20 @@
 
 
 //example of using a message handler from the inject scripts
+
+
+
+
+
+
+
+console.log("tesT")
+
+
+
+
 chrome.extension.onMessage.addListener(
   function(request, sender, sendResponse) {
-  	chrome.pageAction.show(sender.tab.id);
-    sendResponse();
+  	console.log(request);
+    //sendResponse();
   });
